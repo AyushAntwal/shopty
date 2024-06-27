@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, TextField, Button, Link, IconButton, makeStyles, Input, OutlinedInput } from '@mui/material';
+import { Box, Typography, Grid, Button, Link, IconButton, OutlinedInput } from '@mui/material';
 import { Facebook, Instagram, Twitter, Pinterest, Apple } from '@mui/icons-material';
 import Image from 'next/image';
 
@@ -46,6 +46,9 @@ function BottomNav() {
                     <IconButton href="#" color="inherit">
                         <Apple />
                     </IconButton>
+                    <IconButton href="#" color="inherit">
+                        <Pinterest />
+                    </IconButton>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h6" gutterBottom>
@@ -63,29 +66,6 @@ function BottomNav() {
                     </Box>
                 </Grid>
             </Grid>
-            {/* <Box mt={4} display="flex" justifyContent="space-between" alignItems="center">
-                <Box>
-                    <Typography variant="body2" color="textSecondary">
-                        DOWNLOAD THE APP
-                    </Typography>
-                    <Box display="flex" mt={1}>
-                        <IconButton href="#" color="inherit">
-                            <Image src="/google-play.png" alt="Google Play" width={128} height={40} />
-                        </IconButton>
-                        <IconButton href="#" color="inherit">
-                            <Image src="/app-store.png" alt="App Store" width={128} height={40} />
-                        </IconButton>
-                    </Box>
-                </Box>
-                <Box>
-                    <Typography variant="body2" color="textSecondary">
-                        100% SECURE PAYMENT
-                    </Typography>
-                    <Box display="flex" mt={1}>
-                        <Image src="/secure-payment.png" alt="Secure Payment" width={256} height={32} />
-                    </Box>
-                </Box>
-            </Box> */}
         </Box>
     );
 }
