@@ -34,21 +34,6 @@ function BottomNav() {
                     <Typography variant="h6" gutterBottom>
                         CONNECT WITH US
                     </Typography>
-                    <IconButton href="#" color="inherit">
-                        <Facebook />
-                    </IconButton>
-                    <IconButton href="#" color="inherit">
-                        <Instagram />
-                    </IconButton>
-                    <IconButton href="#" color="inherit">
-                        <Twitter />
-                    </IconButton>
-                    <IconButton href="#" color="inherit">
-                        <Apple />
-                    </IconButton>
-                    <IconButton href="#" color="inherit">
-                        <Pinterest />
-                    </IconButton>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h6" gutterBottom>
