@@ -6,7 +6,7 @@ import banners from '../banners.json';
 
 
 function ImageSlider() {
-  const images: any[] = banners;
+  const images = banners;
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
 

@@ -89,7 +89,7 @@ export default ProductList
 
 
 
-export const Product = (prop: any) => {
+export const Product = (prop) => {
     return (
         <Card sx={{ width: 350, height: '100%', paddingTop: 2 }}>
             <CardMedia
@@ -111,7 +111,7 @@ export const Product = (prop: any) => {
                     {prop.product.description}
                 </Typography>
                 <div className='flex gap-2 mt-3'>
-                    {prop.product.color.map((color: any) => (
+                    {prop.product.color.map((color) => (
                         <Tooltip key={color.color} title={color.name} placement='top'>
                             <div className='w-6 h-6 cursor-pointer rounded-full' style={{ backgroundColor: color.color }}></div>
                         </Tooltip>

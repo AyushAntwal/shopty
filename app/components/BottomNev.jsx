@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Button, Link, IconButton, OutlinedInput } from '@mui/material';
 import { Facebook, Instagram, Twitter, Pinterest, Apple } from '@mui/icons-material';
-import Image from 'next/image';
 
 function BottomNav() {
     return (
@@ -25,7 +24,7 @@ function BottomNav() {
                         COMPANY
                     </Typography>
                     <Link href="#" color="inherit" display="block">About Us</Link>
-                    <Link href="#" color="inherit" display="block">We're Hiring</Link>
+                    <Link href="#" color="inherit" display="block">We&apos;re Hiring</Link>
                     <Link href="#" color="inherit" display="block">Terms &amp; Conditions</Link>
                     <Link href="#" color="inherit" display="block">Privacy Policy</Link>
                     <Link href="#" color="inherit" display="block">Blog</Link>

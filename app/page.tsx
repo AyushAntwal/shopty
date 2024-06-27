@@ -60,7 +60,7 @@ export default function Home() {
 }
 
 
-export const VideoPlayer = () => {
+const VideoPlayer = () => {
   return (
     <video
       preload="none"
