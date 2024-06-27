@@ -26,7 +26,7 @@ function BottomNav() {
                     </Typography>
                     <Link href="#" color="inherit" display="block">About Us</Link>
                     <Link href="#" color="inherit" display="block">We're Hiring</Link>
-                    <Link href="#" color="inherit" display="block">Terms & Conditions</Link>
+                    <Link href="#" color="inherit" display="block">Terms &amp; Conditions</Link>
                     <Link href="#" color="inherit" display="block">Privacy Policy</Link>
                     <Link href="#" color="inherit" display="block">Blog</Link>
                 </Grid>
@@ -34,6 +34,21 @@ function BottomNav() {
                     <Typography variant="h6" gutterBottom>
                         CONNECT WITH US
                     </Typography>
+                    <IconButton href="#" color="inherit">
+                        <Facebook />
+                    </IconButton>
+                    <IconButton href="#" color="inherit">
+                        <Instagram />
+                    </IconButton>
+                    <IconButton href="#" color="inherit">
+                        <Twitter />
+                    </IconButton>
+                    <IconButton href="#" color="inherit">
+                        <Apple />
+                    </IconButton>
+                    <IconButton href="#" color="inherit">
+                        <Pinterest />
+                    </IconButton>
                 </Grid>
                 <Grid item xs={12} sm={3}>
                     <Typography variant="h6" gutterBottom>
