@@ -29,8 +29,8 @@ const ProfileDialog = (props: ProfileDialogProps) => {
       <DialogTitle>
         <Typography variant="h5" className="font-bold mb-2 text-center" color='text.secondary'>Sign Up to Get Started</Typography>
       </DialogTitle>
-      <DialogContent sx={{}}>
-        <div className="flex-col gap-4 px-5 flex">
+      <DialogContent>
+        <div className="flex-col gap-4 md:min-w-[500px] px-5 flex">
           <TextField
             sx={{ '& .MuiOutlinedInput-root': { borderRadius: '1rem' } }}
             autoFocus
