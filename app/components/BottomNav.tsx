@@ -28,7 +28,7 @@ function BottomNav() {
                         </Typography>
                         <Link href="#" color="inherit" display="block">About Us</Link>
                         <Link href="#" color="inherit" display="block">We are Hiring</Link>
-                        <Link href="#" color="inherit" display="block">Terms &amp; Conditions</Link>
+                        <Link href="#" color="inherit" display="block">Terms & Conditions</Link>
                         <Link href="#" color="inherit" display="block">Privacy Policy</Link>
                         <Link href="#" color="inherit" display="block">Blog</Link>
                     </Grid>

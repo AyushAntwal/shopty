@@ -5,7 +5,6 @@ import { muiTheme } from "../mui-style";
 import React from "react";
 const CardSlider = React.lazy(() => import('./components/CardSlider'));
 const ProductList = React.lazy(() => import('./components/ProductList'));
-// components/VideoPlayer.js
 
 
 
