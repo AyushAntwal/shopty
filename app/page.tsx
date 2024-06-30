@@ -1,12 +1,10 @@
 'use client';
-import SearchIcon from '@mui/icons-material/Search';
 import { Box, Button, Card, FormControl, Input, OutlinedInput, TextField, TextareaAutosize, ThemeProvider, Typography } from "@mui/material";
 import ImageSlider from "./components/imageSlider";
-import Navbar from "./components/Navbar";
 import { muiTheme } from "../mui-style";
-import CardSlider from './components/CardSlider';
-import ProductList from './components/ProductList';
-import BottomNav from './components/BottomNev';
+import React from "react";
+const CardSlider = React.lazy(() => import('./components/CardSlider'));
+const ProductList = React.lazy(() => import('./components/ProductList'));
 // components/VideoPlayer.js
 
 
@@ -14,14 +12,13 @@ import BottomNav from './components/BottomNev';
 
 export default function Home() {
   return (
-    <ThemeProvider theme={muiTheme}>
-      <main>
-        <Navbar />
-        <Box className=' relative'>
+    <main>
+      <ThemeProvider theme={muiTheme}>
+        <Box className=' relative  h-screen'>
           <VideoPlayer />
-          <div className=' absolute top-0 h-full flex items-center justify-center w-full'>
+          <div className='animation-text-in absolute top-0 h-full flex items-center justify-center w-full'>
             <div className='w-full text-white text-center'>
-              <Typography variant='h1'>Welcome to Shopty</Typography>
+              <Typography variant='h1' className='text-gradient'>Welcome to Shopty</Typography>
               <Typography variant='h6'>Shop for lifestyle</Typography>
             </div>
           </div>
@@ -29,33 +26,8 @@ export default function Home() {
         <CardSlider />
         <ImageSlider />
         <ProductList />
-        {/* <TextField label='Name' variant="outlined" size="small" />
-        <Button>Primary</Button>
-        <Button disabled>Disabled</Button>
-        <Button href="#text-buttons">Link</Button>
-        <Button variant="outlined">Primary</Button>
-        <FormControl className='mt-2'>
-          <Input name="search" placeholder="Search..." startAdornment={<SearchIcon />} />
-        </FormControl>
-        <Button variant="outlined" disabled>
-          Disabled
-        </Button>
-        <Button variant="outlined" href="#outlined-buttons">
-          Link
-        </Button>
-        <Button color="secondary">Secondary</Button>
-        <Button variant="contained" color="success">
-          Success
-        </Button>
-        <Button variant="outlined" color="error">
-          Error
-        </Button>
-
-        <Typography variant='body1'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam numquam doloremque aliquid ipsum ea magnam exercitationem quos sunt consectetur, sit explicabo quia eligendi est a provident atque maiores dicta nostrum!</Typography>
-        <Button variant="contained" color='secondary' startIcon={<SearchIcon />} >Save</Button> */}
-        <BottomNav />
-      </main>
-    </ThemeProvider>
+      </ThemeProvider>
+    </main>
   );
 }
 
@@ -77,7 +49,7 @@ const VideoPlayer = () => {
         zIndex: 1,
         border: '0px solid rgb(255, 255, 255)',
         width: '100vw',
-        height: '100vh',
+        height: '100%',
       }}
       autoPlay
       src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_CpsRIdJWtpXyFN3enwbXd.mp4"

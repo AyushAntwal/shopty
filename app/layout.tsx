@@ -1,8 +1,13 @@
+import React from 'react';
 import type { Metadata } from 'next'
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@mui/material';
+import { muiTheme } from '@/mui-style';
+const BottomNav = React.lazy(() => import('./components/BottomNav'));
+const Navbar = React.lazy(() => import('./components/Navbar'));
 
-const inter = DM_Sans({ subsets: ['latin-ext'], weight: ['300','400','500','600','900','1000'], display: 'block' });
+const inter = DM_Sans({ subsets: ['latin-ext'], weight: ['300', '400', '500', '600', '900', '1000'], display: 'block' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

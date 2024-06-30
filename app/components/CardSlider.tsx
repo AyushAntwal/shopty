@@ -41,11 +41,11 @@ const products = [
 
 function CardSlider() {
     return (
-        <section className='w-full px-10 py-28 scroll-m-7 bg-transparent'>
-            <Typography variant='h4' className='text- mb-5'>Our Best Sellers</Typography>
-            <Box className='flex justify-center items-end gap-5'>
+        <section className='md:px-20 pt-20 bg-transparent'>
+            <Typography variant='h4' className='text- mb-5 font-sans'>Our Best Sellers</Typography>
+            <Box className='flex w-100 overflow-auto pb-20 p-2 hide-scroll gap-5'>
                 {products.map((product, index) => (
-                    <Card key={product.name} className='relative w-52 hover:w-80 transition-all duration-500 p-0'>
+                    <Card key={product.name} className='relative min-w-52 md:min-w-0  hover:w-80 transition-all duration-500 p-0'>
                         <img src={product.img} alt={product.name} className='h-[300px] w-full object-cover' />
                         <div className='absolute top-0 flex items-center justify-center transition-opacity duration-300 opacity-0 hover:opacity-100 bg-slate-600/60 text-center w-full h-full text-white'>
                             <div>

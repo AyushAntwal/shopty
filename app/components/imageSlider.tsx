@@ -4,7 +4,6 @@ import { Button } from '@mui/material';
 import * as React from 'react';
 import banners from '../banners.json';
 
-
 function ImageSlider() {
   const images = banners;
   const [activeStep, setActiveStep] = React.useState(0);
@@ -26,7 +25,7 @@ function ImageSlider() {
 
   return (
     <div className='relative overflow-hidden'>
-      <img className='w-full aspect-[5/2]' src={images[activeStep]?.imgPath} alt={images[activeStep]?.label} />
+      <img className='w-full h-72 md:h-auto  md:aspect-[5/2]' src={images[activeStep]?.imgPath} alt={images[activeStep]?.label} />
       <Button className='absolute top-0 h-full left-0' onClick={handleNext} >
         <ChevronLeft />
       </Button>

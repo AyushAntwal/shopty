@@ -10,3 +10,68 @@
   transition: all 0.5s ease-in-out;
 }
 
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.image-fip-hover:hover {
+  transform: rotateX(180);
+} 
+
+.text-gradient {
+  background: linear-gradient(90deg, #ca5245, #ceea46, #46b1ea, #ea46b1, #ea4646);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.inShow {
+  animation: inShowAnimation both;
+  animation-timeline: view();
+}
+@keyframes inShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animation-text-in {
+  animation: textIn 1s ease-in-out;
+}
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  } 
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4F4F4F;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+.image-background-remove {
+  mix-blend-mode: multiply;
+}

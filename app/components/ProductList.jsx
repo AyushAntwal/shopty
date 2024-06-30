@@ -1,5 +1,6 @@
-import {  ShoppingCartSharp } from '@mui/icons-material';
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Grid, Rating, Tooltip, Typography } from '@mui/material'
+import { ShoppingCartSharp } from '@mui/icons-material';
+import { Button, Card, CardActions, CardContent, CardMedia, Divider, Grid, Rating, Tooltip, Typography } from '@mui/material'
+import { useState } from 'react';
 const products = [
     {
         "name": "Boat Rockerz 400",
@@ -61,8 +62,7 @@ const products = [
         "rating": 4.4,
         "description": "Bluetooth earphones with fast charging and magnetic earbuds."
     }
-]
-;
+];
 
 
 function ProductList() {
@@ -76,7 +76,7 @@ function ProductList() {
                 columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 4 }}
             >
                 {products.map((product, index) => (
-                    <Grid item key={product.name+index}>
+                    <Grid item key={product.name + index}>
                         <Product product={product} />
                     </Grid>
                 ))}
@@ -90,10 +90,15 @@ export default ProductList
 
 
 export const Product = (prop) => {
+    const [pick, setColor] = useState(prop.product.color[0].color);
     return (
-        <Card sx={{ width: 350, height: '100%', paddingTop: 2 }}>
+        <Card className='inShow' sx={{ width: 350, height: '100%', paddingTop: 2 }}>
             <CardMedia
-                sx={{ height: 250, backgroundSize: 'contain' }}
+                sx={{
+                    height: 200,
+                    backgroundSize: 'contain',
+                    filter: 'drop-shadow(0 50px 20px #0009)',
+                }}
                 image={prop.product.img}
                 title={prop.product.name}
             />
@@ -110,10 +115,12 @@ export const Product = (prop) => {
                 <Typography variant="body1" fontSize='12px' color="text.secondary">
                     {prop.product.description}
                 </Typography>
-                <div className='flex gap-2 mt-3'>
-                    {prop.product.color.map((color) => (
-                        <Tooltip key={color.color} title={color.name} placement='top'>
-                            <div className='w-6 h-6 cursor-pointer rounded-full' style={{ backgroundColor: color.color }}></div>
+                <div className='flex items-center gap-2 mt-3'>
+                    {prop.product.color.map((color,index) => (
+                        <Tooltip key={color.name} title={color.name} placement='top'>
+                            <div className={pick === color.color ? ' p-1 bg-yellow-400 rounded-full' : 'p-1 rounded-full'}>
+                                <Typography component='div' onClick={() => setColor(color.color)} className='w-6 h-6 cursor-pointer rounded-full' style={{ backgroundColor: color.color }}></Typography>
+                            </div>
                         </Tooltip>
                     ))}
                 </div>
