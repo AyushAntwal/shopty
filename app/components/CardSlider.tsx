@@ -41,8 +41,8 @@ const products = [
 
 function CardSlider() {
     return (
-        <section className='md:px-20 pt-20 bg-transparent'>
-            <Typography variant='h4' className='text- mb-5 font-sans'>Our Best Sellers</Typography>
+        <section className='md:px-20 px-0 pt-20 bg-transparent'>
+            <Typography variant='h4' className='text-center mb-5 font-serif'>Our Best Sellers</Typography>
             <Box className='flex w-100 overflow-auto pb-20 p-2 hide-scroll gap-5'>
                 {products.map((product, index) => (
                     <Card key={product.name} className='relative min-w-52 md:min-w-0  hover:w-80 transition-all duration-500 p-0'>
